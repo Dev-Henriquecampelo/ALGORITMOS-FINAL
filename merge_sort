@@ -1,0 +1,43 @@
+def merge_sort(lista):
+    """
+    Ordena uma lista utilizando o algoritmo Merge Sort.
+    """
+    if len(lista) > 1:
+        # 1. DIVIDIR
+        meio = len(lista) // 2
+        metade_esquerda = lista[:meio]
+        metade_direita = lista[meio:]
+        
+        print(metade_esquerda)
+        print(metade_direita)
+
+        # 2. CONQUISTAR (Chamada recursiva)
+        merge_sort(metade_esquerda)
+        merge_sort(metade_direita)
+
+        # 3. COMBINAR (Merge)
+        i = j = k = 0
+        
+        # Copia os dados para as listas temporárias metade_esquerda e metade_direita
+        # em ordem, de volta para a lista principal (lista[k])
+        while i < len(metade_esquerda) and j < len(metade_direita):
+            if metade_esquerda[i] < metade_direita[j]:
+                lista[k] = metade_esquerda[i]
+                i += 1
+            else:
+                lista[k] = metade_direita[j]
+                j += 1
+            k += 1
+
+        # Verifica se sobraram elementos em alguma das metades
+        while i < len(metade_esquerda):
+            lista[k] = metade_esquerda[i]
+            i += 1
+            k += 1
+
+        while j < len(metade_direita):
+            lista[k] = metade_direita[j]
+            j += 1
+            k += 1
+            
+    return lista
