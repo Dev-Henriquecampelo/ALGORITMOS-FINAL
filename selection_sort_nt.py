@@ -19,7 +19,7 @@ for nome_coluna in df.columns:
     def selection_sort(lista):
         n = len(lista)
         for i in range(n):
-            indice_menor + i
+            indice_menor = i
            
             for j in range(i + 1,n):
                 if lista[j] < lista[indice_menor]:
@@ -29,6 +29,6 @@ for nome_coluna in df.columns:
 
         return lista
 
-numeros = [0,100]
+numeros = [64, 34, 25, 12, 22, 11, 90]
 print("Lista ordenada com Selection Sort: ", selection_sort(numeros))
 
