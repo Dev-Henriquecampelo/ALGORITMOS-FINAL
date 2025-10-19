@@ -1,4 +1,5 @@
 import pandas as pd
+import time
 
 # 1. Carregar o arquivo CSV
 df = pd.read_csv('dados_ordenacao.csv')
@@ -32,3 +33,8 @@ for nome_coluna in df.columns:
 numeros = lista_limpa
 print("Lista ordenada com Selection Sort: ", selection_sort(numeros))
 
+
+antes = time
+selection_sort(listas_para_analise)
+depois = time
+total = (depois-antes)*10000
