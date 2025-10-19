@@ -70,7 +70,7 @@ for nome_tamanho, lista_dados in listas_para_analise.items():
   for nome_alg, funcao in algoritmos.items():
     lista_teste = list(lista_dados)
     inicio = time.perf_counter()
-    funcao = (lista_teste)
+    funcao(lista_teste)
     fim = time.perf_counter()
     tempos_coletados[nome_alg][nome_tamanho] = fim - inicio
     print(f'{nome_alg}: {fim - inicio:.6f} segundos.')
