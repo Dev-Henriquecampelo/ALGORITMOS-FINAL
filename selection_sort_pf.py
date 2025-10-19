@@ -3,10 +3,10 @@ import pandas as pd
 # 1. Carregar o arquivo CSV
 df = pd.read_csv('dados_ordenacao.csv')
 listas_para_analise = {
-    "pequena_100": df["pequena_100"].dropna().tolist(),
-    "media_1000": df["media_1000"].dropna().tolist(),
-    "grande_10000": df["grande_10000"].dropna().tolist(),
-    "muito_grande_50000": df["muito_grande_50000"].dropna().tolist(),
+    "pequena_100": df["pequena_100"].dropna().astype(int).tolist(),
+    "media_1000": df["media_1000"].dropna().astype(int).tolist(),
+    "grande_10000": df["grande_10000"].dropna().astype(int).tolist(),
+    "muito_grande_50000": df["muito_grande_50000"].dropna().astype(int).tolist(),
 }
 
 
