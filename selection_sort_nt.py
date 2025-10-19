@@ -18,7 +18,9 @@ for nome_coluna in df.columns:
 
 
     def selection_sort(lista):
+        lista = lista.copy()
         n = len(lista)
+
         for i in range(n):
             indice_menor = i
            
@@ -29,6 +31,7 @@ for nome_coluna in df.columns:
             lista[i], lista[indice_menor] = lista[indice_menor], lista[i]
 
         return lista
+    
 
 numeros = lista_limpa
 print("Lista ordenada com Selection Sort: ", selection_sort(numeros))
