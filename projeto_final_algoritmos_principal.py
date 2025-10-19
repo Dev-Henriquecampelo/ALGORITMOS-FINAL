@@ -37,7 +37,20 @@ def insertion_sort(arr):
     arr[j + 1] = chave
   return arr
 
-# FALTA 2 ALGORITMOS
+def selection_sort(array):
+    n = len(array)
+    for i in range(n):
+        indice_menor = i
+
+        for j in range(i + 1, n):
+            if array[j] < array[indice_menor]:
+                indice_menor = j
+
+        array[i], array[indice_menor] = array[indice_menor], array[i]
+
+    return array
+
+# FALTA 1 ALGORITMO
 
 
 
