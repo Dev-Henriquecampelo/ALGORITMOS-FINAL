@@ -16,22 +16,23 @@ for nome_coluna in df.columns:
     #print(listas_para_analise)
 
 
-
-    def selection_sort(lista):
-        lista = lista.copy()
-        n = len(lista)
+    #  Função Selection Sort
+    def selection_sort(arr):
+        arr = arr.copy() # evita modificar a original
+        n = len(arr)
 
         for i in range(n):
             indice_menor = i
            
             for j in range(i + 1,n):
-                if lista[j] < lista[indice_menor]:
+                if arr[j] < arr[indice_menor]:
                     indice_menor = j
             
-            lista[i], lista[indice_menor] = lista[indice_menor], lista[i]
+            arr[i], arr[indice_menor] = arr[indice_menor], arr[i]
 
-        return lista
+        return arr
     
+
 
 numeros = lista_limpa
 print("Lista ordenada com Selection Sort: ", selection_sort(numeros))
