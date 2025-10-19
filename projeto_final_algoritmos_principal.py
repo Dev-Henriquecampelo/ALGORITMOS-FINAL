@@ -55,9 +55,9 @@ def selection_sort(array):
 
 
 # TESTAR E MEDIR O TEMPO DE CADA ALGORITMO
-algoritmos = {'bubble sort': bubble_sort,
-              'insertion sort': insertion_sort,
-              'selection sort': selection_sort,
+algoritmos = {'Bubble Sort': bubble_sort,
+              'Insertion Sort': insertion_sort,
+              'Selection Sort': selection_sort,
               # FALTA O "MERGE SORT" SER ADICIONADO AQUI
               }
 
