@@ -28,4 +28,7 @@ def selection_sort(lista):
     return lista
 
 #numeros = listas_para_analise[nome_coluna]
-print("Lista ordenada com Selection Sort:", selection_sort(listas_para_analise["pequena_100"]))
+# print("Lista ordenada com Selection Sort:", selection_sort(listas_para_analise["pequena_100"]))
+# print("Lista ordenada com Selection Sort:", selection_sort(listas_para_analise["media_1000"]))
+# print("Lista ordenada com Selection Sort:", selection_sort(listas_para_analise["grande_10000"]))
+print("Lista ordenada com Selection Sort:", selection_sort(listas_para_analise["muito_grande_50000"]))
