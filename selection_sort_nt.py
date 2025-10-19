@@ -46,6 +46,6 @@ tp_total = (final-inicio)
 
 for nome, arr in listas_para_analise.items():
     print(f"Deixando a lista ordenada {nome} ({len(arr)} elementos..")
-    tp_total = calcular_tempo(selection_sort, arr)
+    calcular_tempo = (selection_sort, arr)
     tp_total[nome] = tp_total
     print(f"> tempo: {tp_total: .4f} segundos")
