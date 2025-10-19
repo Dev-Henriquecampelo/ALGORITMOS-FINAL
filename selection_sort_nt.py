@@ -33,8 +33,8 @@ for nome_coluna in df.columns:
 numeros = lista_limpa
 print("Lista ordenada com Selection Sort: ", selection_sort(numeros))
 
+inicio = time.time()
+ordenada = selection_sort(lista_limpa)
+final = time.time()
 
-antes = time
-selection_sort(listas_para_analise)
-depois = time
-total = (depois-antes)*10000
+tp_total = (final-inicio)
