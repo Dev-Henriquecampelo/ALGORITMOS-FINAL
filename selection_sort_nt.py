@@ -12,7 +12,7 @@ for nome_coluna in df.columns:
 
     # Agora, 'listas_para_analise' é um dicionário com 4 listas prontas para o teste.
 
-    print(listas_para_analise)
+    #print(listas_para_analise)
 
 
 
@@ -29,6 +29,6 @@ for nome_coluna in df.columns:
 
         return lista
 
-numeros = [64, 34, 25, 12, 22, 11, 90]
+numeros = lista_limpa
 print("Lista ordenada com Selection Sort: ", selection_sort(numeros))
 
