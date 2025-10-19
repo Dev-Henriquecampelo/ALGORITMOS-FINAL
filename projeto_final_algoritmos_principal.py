@@ -24,7 +24,7 @@ def bubble_sort(arr):
         arr[j], arr[j + 1] = arr[j + 1], arr[j]
         swapped = True
     if not swapped:
-    break
+      break
   return arr
 
 def insertion_sort(arr):
@@ -56,31 +56,33 @@ def selection_sort(array):
 
 # TESTAR E MEDIR O TEMPO DE CADA ALGORITMO
 algoritmos = {'bubble sort': bubble_sort,
-              'insertion sort': insertion_sort
-              # FALTA O "SELECTION SORT" E O "MERGE SORT" SEREM ADICIONADOS AQUI
+              'insertion sort': insertion_sort,
+              'selection sort': selection_sort,
+              # FALTA O "MERGE SORT" SER ADICIONADO AQUI
               }
 
-tempo_coletados = {alg: {} for alg in algortimos}
+
+tempos_coletados = {alg: {} for alg in algoritmos}
 print('\n Iniciando medições de desempenho...\n')
 
-for nome_tamanho, lista_dados in lista_para_analise.items():
+for nome_tamanho, lista_dados in listas_para_analise.items():
   print(f'\n Lista: {nome_tamanho} ({len(lista_dados)} elementos)')
   for nome_alg, funcao in algoritmos.items():
     lista_teste = list(lista_dados)
     inicio = time.perf_counter()
-    funcao(lista_teste)
+    funcao = (lista_teste)
     fim = time.perf_counter()
     tempos_coletados[nome_alg][nome_tamanho] = fim - inicio
     print(f'{nome_alg}: {fim - inicio:.6f} segundos.')
 
 
 # GRÁFICOS COMPARATIVOS
-tamanhos_n = sorted([int(''.join(filter(str.isdigit, nome))) for nome in lista_para_analise.keys()])
+tamanhos_n = sorted([int(''.join(filter(str.isdigit, nome))) for nome in listas_para_analise.keys()])
 plt.figure(figsize=(9, 6))
 
 for nome_alg, resultados in tempos_coletados.items():
-  tempos = [resultado[nome] for nome in sorted(resultados.keys(), key=lambda x: int(''.join(filter(str.isdigit, x))))]
-  plt.plot(tamanho_n, tempos, marker='o', label=nome_alg)
+  tempos = [resultados[nome] for nome in sorted(resultados.keys(), key=lambda x: int(''.join(filter(str.isdigit, x))))]
+  plt.plot(tamanhos_n, tempos, marker='o', label=nome_alg)
 
 plt.xlabel('Tamanho da Lista (N)')
 plt.ylabel('Tempo de Execução (segundos)')
